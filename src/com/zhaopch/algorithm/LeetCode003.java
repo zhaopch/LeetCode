@@ -1,5 +1,6 @@
 package com.zhaopch.algorithm;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -19,8 +20,8 @@ import java.util.Set;
  */
 public class LeetCode003 {
 	public static void main(String[] args) {
-		String t = "asdkanjklfhuiqwueojalknsdahsoidfmnlajhsiodfhalsxmdlakjsdkolajlksdmakljhsdlkmasaskjduoaijsldmldjakjsdlm";
-		System.out.println(lengthOfLongestSubstring(t));
+		String t = "asan";
+		System.out.println(lengthOfLongestSubstring4(t));
 	}
 
 	// Solution 1
@@ -59,6 +60,39 @@ public class LeetCode003 {
 			}
 			ans = Math.max(ans, j - i + 1);
 			map.put(s.charAt(j), j + 1);
+		}
+		return ans;
+	}
+
+	// Solution 3
+	public static int lengthOfLongestSubstring3(String s) {
+		int n = s.length();
+		Set<Character> set = new HashSet<>();
+		int ans = 0, i = 0, j = 0;
+		while (i < n && j < n) {
+			// try to extend the range [i, j]
+			System.out.println(i + "--" + j + "--" + set.toString());
+			if (!set.contains(s.charAt(j))) {
+				set.add(s.charAt(j++));
+				ans = Math.max(ans, j - i);
+			} else {
+				set.remove(s.charAt(i++));
+			}
+		}
+		return ans;
+	}
+
+	// Solution 4
+	public static int lengthOfLongestSubstring4(String s) {
+		int n = s.length(), ans = 0;
+		int[] index = new int[128]; // current index of character
+		// try to extend the range [i, j]
+		for (int j = 0, i = 0; j < n; j++) {
+			i = Math.max(index[s.charAt(j)], i);
+			ans = Math.max(ans, j - i + 1);
+			System.out.println(s.charAt(j) + "----" + i); 
+			index[s.charAt(j)] = j + 1;
+			System.out.println(Arrays.toString(index));
 		}
 		return ans;
 	}
