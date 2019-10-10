@@ -17,7 +17,9 @@ public class LeetCode015 {
 		int[] nums = { -1, 2, -15, 6, 9, 11, 10, -7, 1 };
 		List<List<Integer>> res = threeSum(nums);
 
-		System.out.println(Arrays.toString(res.toArray()));
+//		System.out.println(Arrays.toString(res.toArray()));
+		int i = 0b11000010;
+		System.out.println(Integer.toBinaryString(i >> 2));
 	}
 
 	public static List<List<Integer>> threeSum(int[] nums) {
@@ -28,8 +30,9 @@ public class LeetCode015 {
 		int length = nums.length;
 		Arrays.sort(nums);
 		for (int i = 0; i < length; i++) {
-			// 如果当前数字大于0，则三数之和一定大于0，所以结束循环
-			if (nums[i] > 0) {
+			// 当前数字大于0，则三数之和一定大于0；
+			// 所以所以结束循环
+			if (nums[i] >= 0) {
 				break;
 			}
 			if (i > 0 && nums[i] == nums[i - 1]) {
