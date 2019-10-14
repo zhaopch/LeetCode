@@ -15,7 +15,7 @@ import java.util.Set;
  * 
  * 示例 2: 输入: "bbbbb" 输出: 1 解释: 无重复字符的最长子串是 "b"，其长度为 1。
  *
- * @author ZhaoPch
+ * @author PengCheng.Zhao
  * 
  */
 public class LeetCode003 {

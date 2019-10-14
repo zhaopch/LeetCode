@@ -13,7 +13,7 @@ package com.zhaopch.algorithm;
  *         如果不能执行有效的转换，则返回 0。如果正确的值超过的可表示的范围，则返回 INT_MAX（2147483647）或
  *   INT_MIN（-2147483648）。
  * 
- * 	 @author ZhaoPch
+ * 	 @author PengCheng.Zhao
  * 
  */
 public class LeetCode008 {
