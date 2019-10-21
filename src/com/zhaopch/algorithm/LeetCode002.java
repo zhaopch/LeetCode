@@ -9,17 +9,26 @@ package com.zhaopch.algorithm;
  */
 public class LeetCode002 {
 	public static void main(String[] args) {
-		ListNode l1, l2;
+		ListNode l1, l2, temp;
 		l1 = new ListNode(5);
-		l1.next = new ListNode(2);
-		l1.next.next = new ListNode(0);
-		l1.next.next.next = new ListNode(3);
+		temp = l1;
+		temp.next = new ListNode(2);
+		temp = temp.next;
+		temp.next = new ListNode(0);
+		temp = temp.next;
+		temp.next = new ListNode(3);
+		temp = temp.next;
+//		l1.next = new ListNode(2);
+//		l1.next.next = new ListNode(0);
+//		l1.next.next.next = new ListNode(3);
 		l2 = new ListNode(8);
 		l2.next = new ListNode(3);
 		l2.next.next = new ListNode(1);
+		l2.next.next.next = new ListNode(7);
 		ListNode l3 = addTwoNumbers(l1, l2);
 		System.out.println("L1: " + l1.toString());
 		System.out.println("L2: " + l2.toString());
+		System.out.println("temp: " + temp.toString());
 		System.out.println("L3: " + l3.toString());
 	}
 
@@ -46,6 +55,7 @@ public class LeetCode002 {
 
 	public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 		ListNode dummyHead = new ListNode(0);
+		// TODO dummyHead赋值给curr，如何通过更改curr的值来更改dummyHead的值
 		ListNode p = l1, q = l2, curr = dummyHead;
 		int carry = 0;
 		while (p != null || q != null) {
@@ -53,6 +63,8 @@ public class LeetCode002 {
 			int y = (q != null) ? q.val : 0;
 			int sum = carry + x + y;
 			carry = sum / 10;
+			System.out.println("curr:" + curr.toString());
+			System.out.println("dummyHead:" + dummyHead.toString());
 			curr.next = new ListNode(sum % 10);
 			curr = curr.next;
 			if (p != null) {
@@ -61,6 +73,8 @@ public class LeetCode002 {
 			if (q != null) {
 				q = q.next;
 			}
+			System.out.println("curr:" + curr.toString());
+			System.out.println("dummyHead:" + dummyHead.toString());
 		}
 		if (carry > 0) {
 			curr.next = new ListNode(carry);
