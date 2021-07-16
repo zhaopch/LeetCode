@@ -13,12 +13,12 @@ import java.util.List;
  */
 
 public class LeetCode015 {
-	public static void main(String[] args) {
-		int[] nums = { -1, 2, -15, 6, 9, 11, 10, -7, 1 };
-		List<List<Integer>> res = threeSum(nums);
-
-		System.out.println(Arrays.toString(res.toArray()));
-	}
+//	public static void main(String[] args) {
+//		int[] nums = { -1, 2, -15, 6, 9, 11, 10, -7, 1 };
+//		List<List<Integer>> res = threeSum(nums);
+//
+//		System.out.println(Arrays.toString(res.toArray()));
+//	}
 
 	public static List<List<Integer>> threeSum(int[] nums) {
 		List<List<Integer>> res = new ArrayList<List<Integer>>();

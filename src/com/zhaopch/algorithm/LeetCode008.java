@@ -18,10 +18,10 @@ package com.zhaopch.algorithm;
  */
 public class LeetCode008 {
 
-	public static void main(String[] args) {
-		String test = "-215945451515185dawd";
-		System.out.println(atoi(test));
-	}
+//	public static void main(String[] args) {
+//		String test = "-215945451515185dawd";
+//		System.out.println(atoi(test));
+//	}
 
 	// Solution 1
 	public static int myAtoi(String str) {

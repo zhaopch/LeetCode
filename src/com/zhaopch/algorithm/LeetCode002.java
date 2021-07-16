@@ -8,29 +8,29 @@ package com.zhaopch.algorithm;
  * @author PengCheng.Zhao
  */
 public class LeetCode002 {
-	public static void main(String[] args) {
-		ListNode l1, l2, temp;
-		l1 = new ListNode(5);
-		temp = l1;
-		temp.next = new ListNode(2);
-		temp = temp.next;
-		temp.next = new ListNode(0);
-		temp = temp.next;
-		temp.next = new ListNode(3);
-		temp = temp.next;
-//		l1.next = new ListNode(2);
-//		l1.next.next = new ListNode(0);
-//		l1.next.next.next = new ListNode(3);
-		l2 = new ListNode(8);
-		l2.next = new ListNode(3);
-		l2.next.next = new ListNode(1);
-		l2.next.next.next = new ListNode(7);
-		ListNode l3 = addTwoNumbers(l1, l2);
-		System.out.println("L1: " + l1.toString());
-		System.out.println("L2: " + l2.toString());
-		System.out.println("temp: " + temp.toString());
-		System.out.println("L3: " + l3.toString());
-	}
+//	public static void main(String[] args) {
+//		ListNode l1, l2, temp;
+//		l1 = new ListNode(5);
+//		temp = l1;
+//		temp.next = new ListNode(2);
+//		temp = temp.next;
+//		temp.next = new ListNode(0);
+//		temp = temp.next;
+//		temp.next = new ListNode(3);
+//		temp = temp.next;
+////		l1.next = new ListNode(2);
+////		l1.next.next = new ListNode(0);
+////		l1.next.next.next = new ListNode(3);
+//		l2 = new ListNode(8);
+//		l2.next = new ListNode(3);
+//		l2.next.next = new ListNode(1);
+//		l2.next.next.next = new ListNode(7);
+//		ListNode l3 = addTwoNumbers(l1, l2);
+//		System.out.println("L1: " + l1.toString());
+//		System.out.println("L2: " + l2.toString());
+//		System.out.println("temp: " + temp.toString());
+//		System.out.println("L3: " + l3.toString());
+//	}
 
 	static class ListNode {
 		int val;

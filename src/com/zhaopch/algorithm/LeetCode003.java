@@ -19,10 +19,10 @@ import java.util.Set;
  * 
  */
 public class LeetCode003 {
-	public static void main(String[] args) {
-		String t = "asan";
-		System.out.println(lengthOfLongestSubstring4(t));
-	}
+//	public static void main(String[] args) {
+//		String t = "asan";
+//		System.out.println(lengthOfLongestSubstring4(t));
+//	}
 
 	// Solution 1
 	public static int lengthOfLongestSubstring(String s) {

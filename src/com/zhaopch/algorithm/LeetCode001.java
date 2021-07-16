@@ -11,12 +11,12 @@ import java.util.HashMap;
  *
  */
 public class LeetCode001 {
-	public static void main(String[] args) {
-		int target = 12;
-		int[] nums = { 0, 1, 2, 5, 6, 9, 11, 10, 7, 18 };
-		int[] result = twoSum2(nums, target);
-		System.out.println(Arrays.toString(result));
-	}
+//	public static void main(String[] args) {
+//		int target = 12;
+//		int[] nums = { 0, 1, 2, 5, 6, 9, 11, 10, 7, 18 };
+//		int[] result = twoSum2(nums, target);
+//		System.out.println(Arrays.toString(result));
+//	}
 	//两次哈希遍历
 	public static int[] twoSum(int[] nums, int target) {
 		HashMap<Integer, Integer> m = new HashMap<Integer, Integer>();
