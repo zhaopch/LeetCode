@@ -2,6 +2,13 @@ package com.zhaopch.algorithm;
 
 import java.util.Stack;
 
+/**
+ * @author zhaopch
+ *
+ * @date 2021/07/16
+ *
+ * @description 仅用递归操作和栈操作逆序一个栈
+ */
 public class ReverseStackUsingRecursive {
 
     public static void main(String[] args) {
